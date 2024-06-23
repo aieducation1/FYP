@@ -1,6 +1,6 @@
 echo " BUILD START"
 # Install dependencies
-python -m pip install -r requirement.txt
+pip install -r requirement.txt
 
 # Collect static files
 python manage.py collectstatic --noinput --clear
