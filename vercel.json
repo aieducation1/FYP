@@ -3,13 +3,6 @@
     "version": 2,
     "builds": [
       {
-        "src": "build_files.sh",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "staticfiles"
-        }
-      },
-      {
         "src": "ai_career_recommendation/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "300mb" }
@@ -20,10 +13,6 @@
         "src": "/(.*)",
         "dest": "ai_career_recommendation/wsgi.py"
       }
-    ],
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "ai_career_recommendation.settings",
-      "PYTHONUNBUFFERED": "true"
-    }
+    ]
   }
   
